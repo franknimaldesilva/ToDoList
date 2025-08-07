@@ -40,3 +40,13 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+/server/ToDoListStore/obj
+/server/ToDoListStore/bin/Debug/net9.0
+/server/ToDoListWebApi/ToDoListWebApi/Controllers/WeatherForecastController.cs
+/server/ToDoListWebApi/ToDoListWebApi/bin/Debug/net9.0
+/server/ToDoListWebApi/ToDoListWebApi/obj/Release/net9.0
+/server/ToDoListWebApi/ToDoListWebApi/obj/Debug/net9.0
+/server/ToDoListWebApi/ToDoListWebApi/obj
+/server/ToDoListWebApi/ToDoListWebApi/WeatherForecast.cs
+/server/ToDoListWebApi/.vs
+/.vs
