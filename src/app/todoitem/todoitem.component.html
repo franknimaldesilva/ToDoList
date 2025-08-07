@@ -1,0 +1,26 @@
+@if(mode() === "view")
+{
+     <div>
+          <h2>{{toDoItem().taskName}}</h2>
+          <h3>{{toDoItem().status}}</h3>
+          <p>{{toDoItem().description}}</p>
+        </div>
+        <button (click)="setMode('edit')">edit</button>
+         <button (click)="deleteItem()">Delete</button>
+}
+@else
+{
+   
+    <div>
+          <label >Task Name</label>
+          <input id="taskName" [value]="toDoItem().taskName"  (input)="setValidity($event)" />
+          <label >Status</label>
+           <input id="status" [value]="toDoItem().status"  (input)="setValidity($event)"  />
+           <label >description</label>
+           <input  id="description"   [value]="toDoItem().description"  (input)="setValidity($event)"  />
+       
+        </div>
+          <button (click)="setMode('view')">cancel</button>
+          <button type="submit" (click)="save()">Save</button>
+         
+}
