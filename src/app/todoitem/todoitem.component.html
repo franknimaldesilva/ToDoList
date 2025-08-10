@@ -1,26 +1,48 @@
 @if(mode() === "view")
 {
-     <div>
-          <h2>{{toDoItem().taskName}}</h2>
-          <h3>{{toDoItem().status}}</h3>
-          <p>{{toDoItem().description}}</p>
-        </div>
-        <button (click)="setMode('edit')">edit</button>
-         <button (click)="deleteItem()">Delete</button>
+<details>
+  <summary>
+    <div class="rowflexcls">
+      <h3 class="clsleft">{{toDoItem().taskName}}</h3>
+      <h3 class="clsright">{{toDoItem().status}}</h3>
+    </div>
+  </summary>
+  <div>
+    <p>
+      {{toDoItem().description}} </p>
+    <button (click)="setMode('edit')">edit</button>
+    <button (click)="deleteItem()">Delete</button>
+
+
+  </div>
+</details>
+
 }
 @else
 {
-   
-    <div>
-          <label >Task Name</label>
-          <input id="taskName" [value]="toDoItem().taskName"  (input)="setValidity($event)" />
-          <label >Status</label>
-           <input id="status" [value]="toDoItem().status"  (input)="setValidity($event)"  />
-           <label >description</label>
-           <input  id="description"   [value]="toDoItem().description"  (input)="setValidity($event)"  />
-       
-        </div>
-          <button (click)="setMode('view')">cancel</button>
-          <button type="submit" (click)="save()">Save</button>
-         
+<form>
+  <div class="columnflexcls border">
+    <div class="rowflexcls">
+      <div> <label class="clsleft">Task Name</label>
+        <input id="taskName" class="clsright" [value]="toDoItem().taskName" required (input)="setValidity($event)" />
+      </div>
+      <div><label class="clsleft">Status</label>
+        <select class="clsright" id="status" [value]="toDoItem().status" (input)="setValidity($event)">
+          <option>pending</option>
+          <option>in progress</option>
+          <option>blocked</option>
+          <option>done</option>
+        </select>
+      </div>
+    </div>
+    <label class="clsright">description</label>
+    <textarea id="description" [value]="toDoItem().description" required (input)="setValidity($event)" rows="4"
+      cols="50"></textarea>
+    <div class="rowflexcls"><button (click)="setMode('view')">cancel</button>
+      <button type="submit" (click)="save($event)">Save</button>
+    </div>
+  </div>
+
+</form>
+
 }

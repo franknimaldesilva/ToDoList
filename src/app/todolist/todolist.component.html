@@ -1,16 +1,16 @@
 @if(mode() === "newitem")
 {
-  <todoitem [(parentmode)]="mode"   />
+<todoitem [(parentmode)]="mode" />
 }
 @else
 {
-   <button (click)="setMode('newitem')">Add Task</button>
+<button (click)="setMode('newitem')">Add Task</button>
 @if(list().getCount() > 0)
 {
-     @for(item of toDoItems; track item().id)
-     {
+@for(item of toDoItems; track item().id)
+{
 
-        <todoitem  [id]="item().id" [(toDoItem)]="item"   />
-     }
+<todoitem [id]="item().id" [(toDoItem)]="item" />
+}
 }
 }

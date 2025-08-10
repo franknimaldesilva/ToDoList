@@ -26,6 +26,30 @@ body {
   margin: 0;
   font: 0.9em/1.2 Arial, Helvetica, sans-serif;
 }
+.rowflexcls {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.columnflexcls {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+button {
+
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid gray;
+}
 
 @media only screen and (min-width: 600px) {
   .center {

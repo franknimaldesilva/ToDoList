@@ -13,7 +13,7 @@ export class ToDoItem extends ListItem {
     return new ToDoItem();
   }
   taskNameValidate(): boolean {
-    if (!this.taskName || this.taskName === '') {
+    if (!this.taskName || this.taskName === '' || this.taskName === 'frank') {
       let taskErr = new PropertyState(
         'taskName',
         false,

@@ -21,7 +21,8 @@ export interface IListStore {
 })
 export class ListStore implements IListStore{
   data = new Map();
-  apiRoot: string = "https://localhost:7116/api";
+  //apiRoot: string = "https://localhost:7116/api";
+  apiRoot: string = "api";
   refresh = false;
   theList : IList | undefined;
   getNewItem(listName: string): IListItem | undefined {
