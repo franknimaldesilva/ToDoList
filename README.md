@@ -7,7 +7,7 @@ https://github.com/franknimaldesilva/ToDoList/blob/master/ToDoList%20Architectur
 
 The project has been deployed in Azure and can be tested here https://todolist-h2gdcpeje3a5fkh2.australiaeast-01.azurewebsites.net/
 
-I have not put in the unit test due to time contrainst.  
+I have not put in the unit test due to time constraint.  
 
 ## Development server
 
