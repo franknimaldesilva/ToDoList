@@ -2,6 +2,13 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
 
+The pattern used is MVVM this is not a common pattern that is used with Angular. The reasons for using this pattern is to keep in line with were I believe angular is headed. Details are given here
+https://github.com/franknimaldesilva/ToDoList/blob/master/ToDoList%20Architecture.pdf
+
+The project has been deployed in Azure and can be tested here https://todolist-h2gdcpeje3a5fkh2.australiaeast-01.azurewebsites.net/
+
+I have not put in the unit test due to time constraint.  
+
 ## Development server
 
 To start a local development server, run:
